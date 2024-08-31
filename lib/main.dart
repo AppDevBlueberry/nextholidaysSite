@@ -157,31 +157,34 @@ class MobileView extends StatelessWidget {
           fit: BoxFit.contain,
         ),
         SizedBox(height: 20),
-        Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            GestureDetector(
-              onTap: () {
-                _launchUrl(
-                    'https://apps.apple.com/in/app/next-holidays/id6444337009');
-              },
-              child: SvgPicture.asset(
-                'assets/app-store.svg', // Add the App Store badge image here
-                height: 55,
+        Padding(
+          padding: EdgeInsets.symmetric(horizontal: 15),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              GestureDetector(
+                onTap: () {
+                  _launchUrl(
+                      'https://apps.apple.com/in/app/next-holidays/id6444337009');
+                },
+                child: SvgPicture.asset(
+                  'assets/app-store.svg', // Add the App Store badge image here
+                  height: 45,
+                ),
               ),
-            ),
-            SizedBox(width: 10),
-            GestureDetector(
-              onTap: () {
-                _launchUrl(
-                    'https://play.google.com/store/apps/details?id=com.nextholidays.app&hl=en-IN');
-              },
-              child: SvgPicture.asset(
-                'assets/google-play.svg', // Add the Google Play badge image here
-                height: 55,
+              SizedBox(width: 10),
+              GestureDetector(
+                onTap: () {
+                  _launchUrl(
+                      'https://play.google.com/store/apps/details?id=com.nextholidays.app&hl=en-IN');
+                },
+                child: SvgPicture.asset(
+                  'assets/google-play.svg', // Add the Google Play badge image here
+                  height: 45,
+                ),
               ),
-            ),
-          ],
+            ],
+          ),
         ),
         SizedBox(height: 50),
       ],
